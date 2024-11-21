@@ -33,7 +33,7 @@ public class ProductRepository {
 
 		return product;
 	}
-	
+
 	public List<Product> findAllProducts() {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
@@ -42,5 +42,18 @@ public class ProductRepository {
 		List<Product> products = query.getResultList();
 		entityManager.close();
 		return products;
+	}
+
+	public void deleteProduct(int productId) {
+
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		entityTransaction.begin();
+
+		entityManager.remove(entityManager.find(Product.class, productId));
+
+		entityTransaction.commit();
+		entityManager.close();
+
 	}
 }
