@@ -25,4 +25,6 @@ public class ProductController {
 		return new ModelAndView("redirect:/index.jsp");
 
 	}
+	
+	
 }
