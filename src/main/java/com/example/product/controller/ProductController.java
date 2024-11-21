@@ -41,4 +41,16 @@ public class ProductController {
 		return new ModelAndView("redirect:/display-products");
 	}
 
+	@RequestMapping(path = "/update-product" ,method = RequestMethod.GET)
+	public ModelAndView updateProductRequest(@RequestParam("product_id") int productId) {
+		Product product = productService.findProductById(productId); 
+		return new ModelAndView("update_product.jsp", "product", product); 
+	}
+
+	@RequestMapping(path = "/update-product",method = RequestMethod.POST)
+	public ModelAndView updateProduct(@ModelAttribute  Product product) {
+		productService.updateProduct(product); 
+		return new ModelAndView("redirect:/display-products"); 
+	}
+
 }

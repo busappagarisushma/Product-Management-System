@@ -8,10 +8,10 @@
 </head>
 <body>
 	<form action="add-product" method="post">
-		<input type="text" name="title" placeholder="Enter a product title"><br>
-		<input type="text" name="description"placeholder="Enter a Product Description"><br> 
-		<input type="number" name="quantity" placeholder="Enter a product Quantity"><br>
-		<input type="text" name="price" placeholder="Enter a price"><br>
+		<input type="text" name="title" placeholder="Enter a product title"><br><br>
+		<input type="text" name="description"placeholder="Enter a Product Description"><br><br> 
+		<input type="number" name="quantity" placeholder="Enter a product Quantity"><br><br>
+		<input type="text" name="price" placeholder="Enter a price"><br><br>
 		<input type="submit">
 	</form>
 </body>

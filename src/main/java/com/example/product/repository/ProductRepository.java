@@ -56,4 +56,25 @@ public class ProductRepository {
 		entityManager.close();
 
 	}
+	
+	public Product findProductById(int productId) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        
+        Product product = entityManager.find(Product.class, productId); 
+        
+        entityManager.close(); 
+        return product; 
+    }
+	
+	public void updateProduct(Product product) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        
+        entityManager.merge(product); 
+        
+        entityTransaction.commit();
+        entityManager.close();
+    }
+	
 }

@@ -28,4 +28,12 @@ public class ProductService {
 	public void deleteProduct(int productId) {
 		productRepository.deleteProduct(productId);
 	}
+
+	public Product findProductById(int productId) {
+		return productRepository.findProductById(productId); 
+	}
+
+	public void updateProduct(Product product) {
+		productRepository.updateProduct(product); 
+	}
 }
