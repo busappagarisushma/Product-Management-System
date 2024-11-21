@@ -12,5 +12,9 @@
 	<h2>
 		<a href="add_product.jsp">Add Product</a>
 	</h2>
+	<h2>
+		<a href="display-products">Display Products</a>
+	</h2>
+
 </body>
 </html>
