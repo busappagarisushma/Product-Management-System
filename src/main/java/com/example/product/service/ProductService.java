@@ -2,6 +2,7 @@ package com.example.product.service;
 
 import org.springframework.stereotype.Service;
 
+import com.example.product.entity.Product;
 import com.example.product.repository.ProductRepository;
 
 @Service
@@ -14,5 +15,7 @@ public class ProductService {
 		this.productRepository = productRepository;
 	}
 	
-	
+	public Product addProduct(Product product) {	
+		return productRepository.addProduct(product);
+	}
 }
