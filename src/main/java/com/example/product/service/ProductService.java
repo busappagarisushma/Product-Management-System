@@ -8,4 +8,11 @@ import com.example.product.repository.ProductRepository;
 public class ProductService {
 
 	private final ProductRepository productRepository;
+
+	public ProductService(ProductRepository productRepository) {
+		super();
+		this.productRepository = productRepository;
+	}
+	
+	
 }

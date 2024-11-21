@@ -8,4 +8,10 @@ import com.example.product.service.ProductService;
 public class ProductController {
 	
 	private final ProductService productService;
+
+	public ProductController(ProductService productService) {
+		super();
+		this.productService = productService;
+	}
+	
 }
