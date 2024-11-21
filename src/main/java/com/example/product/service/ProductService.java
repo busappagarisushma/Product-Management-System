@@ -1,5 +1,7 @@
 package com.example.product.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.example.product.entity.Product;
@@ -14,10 +16,12 @@ public class ProductService {
 		super();
 		this.productRepository = productRepository;
 	}
-	
+
 	public Product addProduct(Product product) {	
 		return productRepository.addProduct(product);
 	}
-	
-	
+
+	public List<Product> findAllProducts() {
+		return productRepository.findAllProducts();
+	}
 }
