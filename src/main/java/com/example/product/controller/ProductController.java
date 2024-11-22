@@ -22,6 +22,7 @@ public class ProductController {
 		this.productService = productService;
 	}
 
+	
 	@RequestMapping(path = "/add-product",method = RequestMethod.POST )
 	public ModelAndView addProduct(@ModelAttribute Product product) {
 		productService.addProduct(product);
